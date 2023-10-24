@@ -6,7 +6,7 @@ loadComponentContent('main', 'main-content');
 loadComponentContent('footer', 'footer-content');
 
 document.addEventListener('DOMContentLoaded', (e => {
-  hamburguerMenu('.menu-btn', '.menu')
+  hamburguerMenu('.menu-btn', '.menu', '.menu__link')
 }))
 
 console.log('Hello');

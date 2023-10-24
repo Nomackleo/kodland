@@ -1,0 +1,82 @@
+
+<!-- Componente del Encabezado -->
+<div class="header__container">
+
+  <!-- Bloque Navbar -->
+  <nav class="navbar" role="navigation">
+    <div class="navbar__container">
+
+      <!-- Bloque Navbar-Nav -->
+      <ul class="navbar__list" role="list">
+
+        <!-- Elemento Marca del Navbar -->
+        <li class="navbar__item navbar__brand" role="listitem" title="Kodland">
+          <a href="/" class="navbar__link" role="button">KODLAND</a>
+        </li>
+
+        <!-- Elemento de Navbar-Nav (por ejemplo, "Clases") -->
+        <li class="navbar__item navbar__classes" role="listitem" title="Clases">
+          <a href="/inicio" class="navbar__link" role="button">CLASES</a>
+        </li>
+
+        <!-- Elemento de Navbar-Nav (por ejemplo, "Proyectos") -->
+        <li class="navbar__item navbar__projects" role="listitem" title="Proyectos">
+          <a href="/productos" class="navbar__link" role="button">PROYECTOS</a>
+        </li>
+
+        <!-- Elemento de Navbar-Nav (por ejemplo, "Contacto") -->
+        <li class="navbar__item navbar__contact" role="listitem" title="Contacto">
+          <a href="/contacto" class="navbar__link" role="button">CONTACTO</a>
+        </li>
+      </ul>
+
+      <!-- Bloque Toggle (Menú de hamburguesa) -->
+      <button class="menu-btn toggle toggle--elastic" role="button" type="button" aria-label="menu button">
+        <span class="toggle-box">
+          <span class="toggle-inner"></span>
+        </span>
+      </button>
+
+      <!-- Barra lateral del menú desplegable -->
+      <aside class="menu" role="complementary" aria-label="menu">
+        <nav class="menu__panel" role="navigation" aria-label="main menu">
+          <ul class="menu__list" role="list">
+            <!-- Elementos del menú desplegable -->
+            <li class="menu__item" role="listitem" title="Clases">
+              <a class="menu__link" href="/">CLASES</a>
+            </li>
+            <li class="menu__item" role="listitem" title="Proyectos">
+              <a class="menu__link" href="/">PROYECTOS</a>
+            </li>
+            <li class="menu__item" role="listitem" title="Contacto">
+              <a class="menu__link" href="/">CONTACTO</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </nav>
+
+  <!-- Bloque Banner -->
+  <div class="banner">
+    <img
+      src="../../assets/img/background.webp"
+      role="img"
+      alt="Imagen del header"
+      aria-label="Portada Kodland"
+      class="banner__image"
+    />
+
+    <!-- Bloque de Texto en el Banner -->
+    <div class="banner-text">
+      <h1 class="banner-text__title">POP IT!</h1>
+      <p class="banner-text__description">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas numquam
+        voluptatem ducimus inventore suscipit
+      </p>
+      <button href="#" class="filled-button banner-text__cta-button">
+        Empieza
+      </button>
+    </div>
+  </div>
+</div>

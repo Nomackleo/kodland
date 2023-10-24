@@ -1,0 +1,47 @@
+/* 
+  Archivo de estilos principal (styles.css) para la Landing Page.
+  Se han agrupado los estilos globales aquí, y se realizan
+  referencias a otros archivos CSS para componentes específicos.
+*/
+
+@import 'reset.css';
+@import '../components/header/header.css';
+@import '../components/main/main.css';
+@import '../components/footer/footer.css';
+
+/* Estilos generales para el cuerpo de la página */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+/* Definición de la estructura de la página utilizando Grid */
+.kodland__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem auto auto 5rem;
+  grid-template-areas:
+    'header'
+    'header'
+    'main'
+    'footer';
+}
+/* Estilos específicos para el encabezado */
+.header {
+  width: 100%;
+  height: 100%;
+  grid-area: header;
+  height: inherit;
+}
+/* Estilos específicos para el contenido principal */
+.main {
+  width: 100%;
+  height: 100%;
+  grid-area: main;
+  height: inherit;
+}
+/* Estilos específicos para el pie de página */
+.footer {
+  grid-area: footer;
+}

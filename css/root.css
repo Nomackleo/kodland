@@ -1,0 +1,18 @@
+:root {
+  --main-font: 'Roboto', sans-serif;
+  --font-size: 1rem;
+  --display-large: 4rem;
+  --display-line-height: 4rem;
+  --headline-large: 2rem;
+  --headline-medium: 1.8rem;
+  --headline-small: 1.5rem;
+  --title-large: 1.5rem;
+  --title-medium: 1rem;
+  --title-medium-font-weight: 500;
+  --title-small: 1rem;
+  --title-font-weight: bold;
+  --title-line-height: 0.12em;
+  --main-color: #ffbf69;
+  --second-color: #a7f5f1;
+  --main-modal-color: rgba(​ 255, ​ 191, ​ 105, 0.85);
+}

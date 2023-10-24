@@ -1,0 +1,140 @@
+@import './root.css';
+
+.filled-button {
+  display: inline-block;
+  white-space: nowrap;
+  height: 3rem;
+  background-color: var(--second-color);
+  color: black;
+  line-height: 20px;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  flex-shrink: 0;
+  box-sizing: content-box;
+  width: min-content;
+}
+
+.filled-button:enabled {
+  background-color: rgba(167, 245, 241, 1);
+  color: #000;
+}
+
+.filled-button:disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.filled-button:hover {
+  background-color: rgba(150, 220, 216 0.92);
+  transform: translateY(-1px);
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+}
+
+.filled-button:focus {
+  background-color: rgba(167, 245, 241, 0.88);
+
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.filled-button:active {
+  background-color: rgba(167, 245, 241, 0.88);
+}
+
+/* Toggle Button */
+.toggle {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.toggle:hover {
+  opacity: 0.7;
+}
+.toggle.is-active:hover {
+  opacity: 0.7;
+}
+.toggle.is-active .toggle-inner,
+.toggle.is-active .toggle-inner::before,
+.toggle.is-active .toggle-inner::after {
+  background-color: #000;
+}
+
+.toggle-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.toggle-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.toggle-inner,
+.toggle-inner::before,
+.toggle-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.toggle-inner::before,
+.toggle-inner::after {
+  content: '';
+  display: block;
+}
+.toggle-inner::before {
+  top: -10px;
+}
+.toggle-inner::after {
+  bottom: -10px;
+}
+
+.toggle--elastic .toggle-inner {
+  top: 2px;
+  transition-duration: 0.275s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.toggle--elastic .toggle-inner::before {
+  top: 10px;
+  transition: opacity 0.125s 0.275s ease;
+}
+.toggle--elastic .toggle-inner::after {
+  top: 20px;
+  transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toggle--elastic.is-active .toggle-inner {
+  transform: translate3d(0, 10px, 0) rotate(135deg);
+  transition-delay: 0.075s;
+}
+.toggle--elastic.is-active .toggle-inner::before {
+  transition-delay: 0s;
+  opacity: 0;
+}
+.toggle--elastic.is-active .toggle-inner::after {
+  transform: translate3d(0, -20px, 0) rotate(-270deg);
+  transition-delay: 0.075s;
+}

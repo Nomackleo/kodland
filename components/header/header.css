@@ -1,0 +1,281 @@
+/* Importación de estilos globales y estilos de botones */
+@import '../../css/root.css';
+@import '../../css/buttons.css';
+
+/* Estilos para el componente del encabezado */
+.header__container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 5rem 1fr;
+}
+
+/* Estilos para la barra de navegación (Navbar) */
+.navbar {
+  z-index: 100;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: 100vw;
+  height: 5rem;
+}
+
+.navbar__list {
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 57.73% repeat(3, 14.09%);
+  grid-template-rows: 5rem;
+  align-self: center;
+  font-size: var(--font-size);
+  font-weight: bolder;
+}
+
+.navbar__link:hover {
+  color: white !important;
+}
+
+.navbar__link:active {
+  color: #f68a1e !important;
+}
+
+.navbar__brand {
+  display: block;
+  z-index: 998;
+  padding: 0.8rem 0 1rem 0;
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+}
+
+.navbar__classes {
+  grid-row: 1;
+  grid-column: 2 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.navbar__projects {
+  grid-row: 1;
+  grid-column: 3 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.navbar__contact {
+  grid-row: 1;
+  grid-column: 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Banner */
+.banner {
+  z-index: 1;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  width: 100vw;
+  height: inherit;
+  display: grid;
+  grid-template-columns: minmax(5%, 3rem) 52.73% 37.27% minmax(5%, 3rem);
+  grid-template-rows: 5rem 1fr;
+}
+
+.banner__image {
+  z-index: 1;
+  grid-column: 1 / 5;
+  grid-row: 1 / 3;
+  max-width: 100%;
+}
+/* Estilos para el texto en el banner */
+.banner-text {
+  z-index: 10;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-rows: 38.2% 23.6% 38.2%;
+  grid-template-columns: 57.73% 42.27%;
+}
+
+.banner-text__title {
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+  font-size: 10rem;
+  font-weight: bold;
+  line-height: var(--tittle-line-height);
+  text-decoration: none;
+  align-self: center;
+  color: white;
+  width: 100vw;
+}
+
+.banner-text__description {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  padding-right: 2rem;
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.banner-text__cta-button {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  margin-top: 2rem;
+}
+/* Estilos para el menú de hamburguesa en dispositivos móviles */
+.menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu-btn {
+  display: none;
+  opacity: 0;
+  visibility: 0;
+}
+/* Media queries para estilos en dispositivos móviles y tabletas */
+@media (max-width: 992px) {
+  .banner-text__title {
+    font-size: 7rem;
+  }
+  .banner-text__description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    background-color: #ffbf69;
+  }
+  /* Navbar */
+  .navbar__container {
+    display: grid;
+    grid-template-columns: 70.72% 29.28%;
+    grid-template-rows: 5rem;
+  }
+  .navbar__list {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .navbar__item:not(:first-child) {
+    display: none;
+  }
+  .navbar__brand {
+    padding: 0.8rem 0 1rem 2rem;
+  }
+
+  /* Botón toggle  */
+  .menu-btn {
+    display: block;
+    opacity: 100;
+    visibility: visible;
+    grid-row: 1;
+    grid-column: 2 / 3;
+    z-index: 999;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    justify-self: center;
+    align-self: center;
+  }
+  /* Menu de hamburguesa  */
+  .menu {
+    position: fixed;
+    z-index: 800;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    background-color: rgb(255, 191, 105);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    transform: translate(-100%, 0);
+  }
+
+  .menu.is-active {
+    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 61.8vh;
+  }
+
+  .menu__item {
+    margin: 2rem;
+  }
+  
+  .menu__link {
+    height: 6rem;
+    display: block;
+    width: 100vw;
+    padding: 2.375rem;
+    font-size: 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+  }
+
+  .menu__link:hover {
+    color: white;
+    background-color: #f68a1e;
+  }
+
+  .menu__link:active {
+    color: #f68a1e;
+  }
+
+  .banner-text__description {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__container {
+    height: auto;
+  }
+
+  .banner {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: minmax(5%, 3rem) 52.73% 37.27% minmax(5%, 3rem);
+    grid-template-rows: 1fr;
+  }
+
+  .banner__image {
+    grid-column: 1 / 5;
+    width: 100vw;
+    align-self: flex-end;
+  }
+  .banner-text {
+    z-index: 10;
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+
+  .banner-text__title {
+    font-size: 4.5rem;
+  }
+
+  .banner-text__description {
+    font-size: 1rem;
+    padding-right: 0;
+  }
+}

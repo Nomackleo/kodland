@@ -27,7 +27,8 @@ Se ha utilizado la fuente "Roboto" de Google Fonts en este proyecto. Las fuentes
 - El documento HTML utiliza la etiqueta `<meta>` para configurar la codificación de caracteres y la vista en dispositivos móviles.
 - La página utiliza una estructura de contenedor con áreas definidas para el encabezado, el contenido principal y el pie de página.
 
+## Muestra de Cómo Funciona la Página
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M_Zz3lZhFfg?si=Q6-ojI6691QzISku" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Errores Conocidos
 No se han mencionado errores específicos en el código proporcionado. Sin embargo, se recomienda realizar pruebas exhaustivas en varios navegadores y dispositivos para asegurarse de que la página se vea y funcione como se espera.
-
-Puedes usar esta documentación como punto de partida para tu archivo README.md en GitHub. Además, si tienes más detalles que te gustaría incluir o si tienes algún otro aspecto del proyecto que necesites documentar, no dudes en agregarlo a esta documentación. Asegúrate de actualizar el README.md en tu repositorio de GitHub y proporciona enlaces a recursos adicionales o instrucciones de uso si es necesario.

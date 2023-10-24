@@ -28,7 +28,9 @@ Se ha utilizado la fuente "Roboto" de Google Fonts en este proyecto. Las fuentes
 - La página utiliza una estructura de contenedor con áreas definidas para el encabezado, el contenido principal y el pie de página.
 
 ## Muestra de Cómo Funciona la Página
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M_Zz3lZhFfg?si=Q6-ojI6691QzISku" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<a href='https://youtu.be/M_Zz3lZhFfg' target='_blank'>
+  <img width='30%' src='https://img.youtube.com/vi/M_Zz3lZhFfg/mqdefault.jpg' alt='¡Kodland Landing Page!' />
+</a>
 
 ## Errores Conocidos
 No se han mencionado errores específicos en el código proporcionado. Sin embargo, se recomienda realizar pruebas exhaustivas en varios navegadores y dispositivos para asegurarse de que la página se vea y funcione como se espera.
